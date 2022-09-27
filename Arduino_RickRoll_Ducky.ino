@@ -35,7 +35,7 @@ void loop() {
   keyboard.pressSpecialKey(GUI); // Press the GUI (Windows) key
   keyboard.releaseKey(); // Release the GUI key
   delay(1000); // Wait for the Start Button to open
-  keyboard.print("cmd"); // Type "run" followed by a carriage return
+  keyboard.print("cmd"); // Type "cmd" 
 
   keyboard.pressSpecialKey(0,ENTER);
   keyboard.releaseKey();
@@ -50,6 +50,8 @@ void loop() {
   keyboard.pressSpecialKey(0,ENTER);
   keyboard.releaseKey();
   delay(1000);
+  
+  /* Creates a notification prompt saying that user has been hacked */
   keyboard.print("powershell -Command \"& {Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show('YOU HAVE BEEN HACKED! JSR', 'WARNING', 'OK', [System.Windows.Forms.MessageBoxIcon]::Information);}\"");
 
   delay(2000);
