@@ -73,7 +73,7 @@ void loop() {
   keyboard.releaseKey();
 
   delay(3000);
-  keyboard.print("shutdown /s"); // shutdown
+  keyboard.print("shutdown /s"); // schedule a shutdown for 1 minute
 
   delay(2000);
   keyboard.pressSpecialKey(0,ENTER);
